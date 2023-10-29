@@ -10,9 +10,16 @@ export class PostsService {
         private filesService: FilesService) {
 
     }
-    async create(dto: CreatePostDto, image: any) {
+    async create(dto: CreatePostDto, image: any, userId: number) {
+        console.log('userId', userId);
+
         const fileName = await this.filesService.createFile(image);
-        const post = await this.postRepository.create({ ...dto, image: fileName });
+        const post = await this.postRepository.create({ ...dto, image: fileName, userId: userId });
         return post;
+    }
+
+    async getPosts() {
+        const posts = await this.postRepository.findAll();
+        return posts;
     }
 }
