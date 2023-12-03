@@ -2,21 +2,21 @@
     "development": {
       "username": "postgres",
       "password": "1234",
-      "database": "nest-app",
+      "database": "web3-db",
       "host": "localhost",
       "dialect": "postgres"
     },
     "test": {
         "username": "postgres",
         "password": "1234",
-        "database": "nest-app",
+        "database": "web3-db",
         "host": "localhost",
         "dialect": "postgres"
     },
     "production": {
         "username": "postgres",
         "password": "1234",
-        "database": "nest-app",
+        "database": "web3-db",
         "host": "localhost",
         "dialect": "postgres"
     }
